@@ -1,4 +1,4 @@
-# 🏥 CarePlus Support Analytics — AWS End-to-End ETL Pipeline
+# 🏥 CarePlus Support Analytics - AWS End-to-End ETL Pipeline
 
 ## 📌 Project Overview
 
@@ -51,7 +51,7 @@ CarePlus System
 | Purpose | Technology |
 | --- | --- |
 | **Source System** | MySQL (tickets), Log files (system errors) |
-| **Raw Storage** | Amazon S3 (Data Lake — Raw layer) |
+| **Raw Storage** | Amazon S3 (Data Lake - Raw layer) |
 | **Log Processing** | AWS Lambda (serverless, event-driven) |
 | **Ticket Processing** | AWS Glue (managed ETL, PySpark) |
 | **Processed Storage** | Amazon S3 (Parquet format) |
