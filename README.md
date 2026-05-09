@@ -44,8 +44,6 @@ CarePlus System
 
 ![Pipeline Architecture](pipeline_architecture.png)
 
-![Technology Architecture](tech_architecture.png)
-
 ---
 
 ## 📦 Tech Stack
