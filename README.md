@@ -67,19 +67,19 @@ CarePlus System
 ```text
 ├── data_ingestion/
 │   ├── support_logs/
-│   │   └── lambda_ingest_logs.py
+│   │   └── support_logs_ingestion_to_S3.py
 │   └── support_tickets/
-│       └── glue_ingest_tickets.py
+│       └── support_tickets_ingestion_to_S3.py
 │
 ├── data_transformation/
 │   ├── support_logs/
-│   │   └── lambda_transform_logs.py
+│   │   └── automate_support_log_ETL.py
 │   └── support_tickets/
-│       └── glue_transform_tickets.py
+│       └── automate_support_tickets_ETL.py
 │
 ├── data_warehousing_analytics/
-│   ├── athena_queries.sql
-│   └── redshift_load.py
+│   ├── sql-queries.sql
+│   └── incremental-data-loading-logs.py
 │
 ├── pipeline_architecture.png
 ├── tech_architecture.png
@@ -206,40 +206,6 @@ Power BI dashboards provide insights including:
 
 ---
 
-## 🚀 How to Run
-
-### Prerequisites
-
-- AWS account with S3, Lambda, Glue, Athena, and Redshift access
-- Python 3.9+ with `boto3` and `pandas`
-- IAM roles configured for:
-  - Lambda → S3 access
-  - Glue → S3 access
-
----
-
-### Steps
-
-1. Create S3 buckets for raw and processed layers
-
-2. Deploy Lambda functions:
-   - `data_ingestion/support_logs/`
-   - `data_transformation/support_logs/`
-
-3. Create and run Glue jobs:
-   - `data_ingestion/support_tickets/`
-   - `data_transformation/support_tickets/`
-
-4. Run Athena queries from:
-   - `data_warehousing_analytics/athena_queries.sql`
-
-5. Load data into Redshift using:
-   - `data_warehousing_analytics/redshift_load.py`
-
-6. Connect Power BI to the Redshift endpoint
-
----
-
 ## 🚀 Key Features
 
 - End-to-end AWS ETL architecture
@@ -251,11 +217,3 @@ Power BI dashboards provide insights including:
 - Structured + unstructured data processing
 - Parquet-based optimized storage
 
----
-
-## 👨‍💻 Author
-
-**Ajith Kumar Balamurugan**
-
-- Master’s in Data Science — University of South Australia
-- Data Engineering | AWS | PySpark | SQL | Power BI
